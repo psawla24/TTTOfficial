@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>In-Class Example</title>
+<meta charset="UTF-8">
+    <script 
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js">
+    </script>
+
+    <style>
+      .red {
+      	background-color: red;
+      }  
+
+      .large {
+      	font-size: 20px;
+      }
+
+    </style>
+
+
+</head>
+<body ng-init="name='Initial Value'; makeItRed='false'">  <!--Run immediately when Angular loads-->
+
+	<input type="text" ng-model="name">
+
+	<p ng-class="{'red': makeItRed, 'large': name}">{{ name }}</p>
+
+	<p>makeItRed = <span ng-bind="makeItRed"></span></p>
+
+	<p ng-bind="name">Test</p> <!--If value of 'name' changes, the inner HTML (Test) is updated too-->
+
+	<button ng-click="makeItRed=true">{{ name }}</button>
+
+</body>
+</html>
+
+
+NOTES:
+
+- A controller defines variables that are accessible inside that particular tag
+
+
+
+
+

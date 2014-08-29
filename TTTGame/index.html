@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="tttApp">
+<head>
+	<meta charset="utf-8">
+	<title>Tic Tac Toe!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>    
+    <script src="app.js"></script>
+      <!--<script src="angular.js"></script>-->
+
+</head>
+
+<input type="text" ng-model="data.text"/>
+
+<body ng-controller="tttController">
+
+	<h1 id="heading">[  TiC TaC ToE  ]</h1>
+<!--
+    <div id="score1">
+    <input type="text" placeholder="Player 1 Name"/>
+    <button>Submit</button>
+    </div>
+-->
+
+    <div>
+        <button id="resetButton" ng-click="resetGame()">Reset if you dare!</button>
+    </div>
+
+    <div id="playerStats">
+
+        <p>Player 1 Score: {{ player1 }}</p>
+
+        <p>Player 2 Score: {{ player2 }}</p>
+
+        <p>Total Games: {{ player1 + player2 }}</p>
+
+        <p>% Win Player 1: {{ ((player1) / (player1 + player2))*100 }}</p>
+
+        <p>% Win Player 2: {{ ((player2) / (player1 + player2))*100 }}</p>
+
+    </div>
+
+<!--
+    <div id="score2">
+    <input type="text" placeholder="Player 2 Name"/>
+    <button>Submit</button>
+    </div>
+-->
+
+	<div id="container">
+	<div id="ninedivs" ng-repeat="cell in cells track by $index"
+    ng-class="{cell: true, clear:($index % 3 == 0), rightLine:($index % 3 != 2), bottomLine: ($index <= 5), one:($index===0), two:($index===1), three:($index===2), four:($index===3), five:($index===4), six:($index===5), seven:($index===6), eight:($index===7), nine:($index===8) }" ng-click="alternate($index)" onmouseover="this.style.backgroundImage='url(http://www.freevector.com/site_media/preview_images/FreeVector-Gray-Floral-Pattern.jpg)';" onmouseout="this.style.background='white';"
+    class="cell">{{ cell }}</div>
+    </div>
+
+
+</body>
+
+
+</html>
+
+
+    
