@@ -1,0 +1,127 @@
+body {
+	background-image: url('pastel1.jpg');
+}
+
+img {
+	opacity: 0.4;
+}
+
+#heading {
+	font-size: 60px;
+	font-weight: 900;
+	color: #DB00DB;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+	text-align: center;
+	font-family: Fantasy;
+}
+
+p {
+	font-size: 10px;
+	margin: -4px;
+}
+
+#playerStats {
+	display: inline-block;
+	margin-top: -30px;
+}
+
+#resetButton {
+	font-size: 18px;
+	margin-left: 630px; 	
+	color: white;
+	background: #FFFFB5;
+	border-radius: 7px;
+	display: inline-block;
+}
+
+input {
+	height: 35px;
+	width: 250px;
+	box-shadow: inset 3px 3px 3px 3px #CCCCCC;
+}
+
+#container {
+	height: 564px;
+	width: 564px;
+	margin: auto;
+}
+
+#ninedivs {
+	height: 164px;
+	width: 164px;
+	border: 12px solid #00E6B8;
+	display: inline-block;
+	float: left;
+	border-radius: 18px;
+	background-color: white;
+}
+
+.cell {
+	font-size: 144px;
+	color: white;
+	/* text-shadow: 6px 6px #999999; */
+	text-align: center;
+	vertical-align: 50px;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.rightLine {
+	border-right: 2px solid #00E6B8;
+}
+
+.bottomLine {
+	border-bottom: 2px solid #00E6B8;
+}
+
+.clear {
+	clear: both;
+}
+
+.one {
+	border-color: #FF86E3 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF86E3, 0 0 70px #FF86E3, 0 0 80px #FF86E3, 0 0 100px #FF86E3, 0 0 150px #FF86E3;
+}
+
+.two {
+	border-color: #7BCAE1 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #7BCAE1, 0 0 70px #7BCAE1, 0 0 80px #7BCAE1, 0 0 100px #7BCAE1, 0 0 150px #7BCAE1;
+}
+
+.three {
+	border-color: #D698FE !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #D698FE, 0 0 70px #D698FE, 0 0 80px #D698FE, 0 0 100px #D698FE, 0 0 150px #D698FE;
+}
+
+.four {
+	border-color: #A8CFFF !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #A8CFFF, 0 0 70px #A8CFFF, 0 0 80px #A8CFFF, 0 0 100px #A8CFFF, 0 0 150px #A8CFFF;
+}
+
+.five {
+	border-color: #FFFF84 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFFF84, 0 0 70px #FFFF84, 0 0 80px #FFFF84, 0 0 100px #FFFF84, 0 0 150px #FFFF84;
+}
+
+.six {
+	border-color: #A4F0B7 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #A4F0B7, 0 0 70px #A4F0B7, 0 0 80px #A4F0B7, 0 0 100px #A4F0B7, 0 0 150px #A4F0B7;
+}
+
+.seven {
+	border-color: #FFA8A8 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFA8A8, 0 0 70px #FFA8A8, 0 0 80px #FFA8A8, 0 0 100px #FFA8A8, 0 0 150px #FFA8A8;
+}
+
+.eight {
+	border-color: #7DFDD7 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #7DFDD7, 0 0 70px #7DFDD7, 0 0 80px #7DFDD7, 0 0 100px #7DFDD7, 0 0 150px #7DFDD7;
+}
+
+.nine {
+	border-color: #FF86FF !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF86FF, 0 0 70px #FF86FF, 0 0 80px #FF86FF, 0 0 100px #FF86FF, 0 0 150px #FF86FF;
+}
+
+
+
+
