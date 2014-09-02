@@ -1,0 +1,145 @@
+body {
+	background-image: url('pastel1.jpg');
+}
+
+img {
+	opacity: 0.4;
+}
+
+#heading {
+	font-size: 52px;
+	font-weight: 900;
+	color: #DB00DB;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+	text-align: center;
+	font-family: Fantasy;
+}
+
+#playerStats {
+	display: inline-block;
+	padding: -5px 0px -5px 0px;
+	background-color: white;
+}
+
+.turn2 {
+	margin-top: -77px;
+}
+
+#resetButton {
+	font-size: 18px;
+	margin-left: 650px; 	
+	color: white;
+	background: #FFFF30;
+	border-radius: 7px;
+	display: inline-block;
+	padding-top: -20px;
+}
+
+.turn {
+	font-family: Fantasy;
+	font-size: 30px;
+	font-weight: bold;
+	padding-top: -30px 0px 0px -100px;
+}
+
+#scoreContainer {
+	font-size: 10px;
+	font-family: Fantasy;
+	text-align: center;
+	margin-bottom: 20px
+}
+
+input {
+	height: 35px;
+	width: 250px;
+	box-shadow: inset 3px 3px 3px 3px #CCCCCC;
+}
+
+#container {
+	height: 564px;
+	width: 564px;
+	margin: auto;
+}
+
+#ninedivs {
+	height: 164px;
+	width: 164px;
+	border: 12px solid #00E6B8;
+	display: inline-block;
+	float: left;
+	border-radius: 18px;
+	background-color: white;
+}
+
+.cell {
+	font-size: 144px;
+	color: white;
+	/* text-shadow: 6px 6px #999999; */
+	text-align: center;
+	vertical-align: 50px;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.rightLine {
+	border-right: 2px solid #00E6B8;
+}
+
+.bottomLine {
+	border-bottom: 2px solid #00E6B8;
+}
+
+.clear {
+	clear: both;
+}
+
+.one {
+	border-color: #FF59D6 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF59D6, 0 0 70px #FF59D6, 0 0 80px #FF59D6, 0 0 100px #FF59D6, 0 0 150px #FF59D6;
+}
+
+.two {
+	border-color: #3399FF !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3399FF, 0 0 70px #3399FF, 0 0 80px #3399FF, 0 0 100px #3399FF, 0 0 150px #3399FF;
+}
+
+.three {
+	border-color: #C530C5 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #C530C5, 0 0 70px #C530C5, 0 0 80px #C530C5, 0 0 100px #C530C5, 0 0 150px #C530C5;
+}
+
+.four {
+	border-color: #00FFFF !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF, 0 0 150px #00FFFF;
+}
+
+.five {
+	border-color: #FFFF00 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFFF00, 0 0 70px #FFFF00, 0 0 80px #FFFF00, 0 0 100px #FFFF00, 0 0 150px #FFFF00;
+}
+
+.six {
+	border-color: #00E600 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00E600, 0 0 70px #00E600, 0 0 80px #00E600, 0 0 100px #00E600, 0 0 150px #00E600;
+}
+
+.seven {
+	border-color: #FF6666 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF6666, 0 0 70px #FF6666, 0 0 80px #FF6666, 0 0 100px #FF6666, 0 0 150px #FF6666;
+}
+
+.eight {
+	border-color: #19BF96 !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #19BF96, 0 0 70px #19BF96, 0 0 80px #19BF96, 0 0 100px #19BF96, 0 0 150px #19BF96;
+}
+
+.nine {
+	border-color: #CC33FF !important;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #CC33FF, 0 0 70px #CC33FF, 0 0 80px #CC33FF, 0 0 100px #CC33FF, 0 0 150px #CC33FF;
+}
+
+
+
+
+
+
+

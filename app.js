@@ -1,134 +1,224 @@
-var tttApp = angular.module('tttApp', ['firebase']);
+var tttApp = angular.module('tttApp', ["firebase"]);
 
 tttApp.controller('tttController', ["$scope", "$firebase", 
 	function($scope, $firebase) {
 
-
-
 var fb = new Firebase("https://mintchoco.firebaseio.com/");
-var tttData = $firebase(fb);
-$scope.data = tttData.$asObject();
-
-tttData.$bindTo($scope, "data");
+var angConnect = $firebase(fb).$asObject();
+var fbData = angConnect.$bindTo($scope, 'db').then(function() {
 
 
-$scope.cells = ['','','','','','','','',''];
+$scope.db = {cells:['','','','','','','','','']}
+
+});
+
+
+// $scope.firstPlayer = prompt('What\'s your name?');
+// $scope.secondPlayer = prompt('What\'s your name?');
 
 
 $scope.player1 = 0;
 $scope.player2 = 0;
 
 $scope.checkXWin = function() {
-	if ($scope.cells[0] === 'X' && $scope.cells[1] === 'X' && $scope.cells[2] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1; 
-		$scope.resetGame();}
-	else if ($scope.cells[3] === 'X' && $scope.cells[4] === 'X' && $scope.cells[5] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[6] === 'X' && $scope.cells[7] === 'X' && $scope.cells[8] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[0] === 'X' && $scope.cells[3] === 'X' && $scope.cells[6] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[1] === 'X' && $scope.cells[4] === 'X' && $scope.cells[7] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[2] === 'X' && $scope.cells[5] === 'X' && $scope.cells[8] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[0] === 'X' && $scope.cells[4] === 'X' && $scope.cells[8] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[2] === 'X' && $scope.cells[4] === 'X' && $scope.cells[6] === 'X') {
-		alert("X Wins!!");
-		$scope.player1 += 1;
-		$scope.resetGame();}
+	if ($scope.db.cells[0] === 'X' && $scope.db.cells[1] === 'X' && $scope.db.cells[2] === 'X') {
+		$scope.xFunctions();}
+	else if ($scope.db.cells[3] === 'X' && $scope.db.cells[4] === 'X' && $scope.db.cells[5] === 'X') {
+		$scope.xFunctions();}
+	else if ($scope.db.cells[6] === 'X' && $scope.db.cells[7] === 'X' && $scope.db.cells[8] === 'X') {
+		$scope.xFunctions();}
+	else if ($scope.db.cells[0] === 'X' && $scope.db.cells[3] === 'X' && $scope.db.cells[6] === 'X') {
+		$scope.xFunctions();}
+	else if ($scope.db.cells[1] === 'X' && $scope.db.cells[4] === 'X' && $scope.db.cells[7] === 'X') {
+		$scope.xFunctions();}
+	else if ($scope.db.cells[2] === 'X' && $scope.db.cells[5] === 'X' && $scope.db.cells[8] === 'X') {
+		$scope.xFunctions();}
+	else if ($scope.db.cells[0] === 'X' && $scope.db.cells[4] === 'X' && $scope.db.cells[8] === 'X') {
+		$scope.xFunctions();}
+	else if ($scope.db.cells[2] === 'X' && $scope.db.cells[4] === 'X' && $scope.db.cells[6] === 'X') {
+		$scope.xFunctions();}
 	else if (numMoves == 9) {
 		alert("Cat's Game! Meow!");
 		$scope.resetGame();
+		if (player % 2 === 0) {
+			player = 2;
+		}
+		else {
+			player = 3;
+		}
 	}
 };
 
 
 $scope.checkOWin = function() {
-	if ($scope.cells[0] === 'O' && $scope.cells[1] === 'O' && $scope.cells[2] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[3] === 'O' && $scope.cells[4] === 'O' && $scope.cells[5] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[6] === 'O' && $scope.cells[7] === 'O' && $scope.cells[8] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[0] === 'O' && $scope.cells[3] === 'O' && $scope.cells[6] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[1] === 'O' && $scope.cells[4] === 'O' && $scope.cells[7] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[2] === 'O' && $scope.cells[5] === 'O' && $scope.cells[8] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[0] === 'O' && $scope.cells[4] === 'O' && $scope.cells[8] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
-	else if ($scope.cells[2] === 'O' && $scope.cells[4] === 'O' && $scope.cells[6] === 'O') {
-		alert("O Wins!!");
-		$scope.player2 += 1;
-		$scope.resetGame();}
+	if ($scope.db.cells[0] === 'O' && $scope.db.cells[1] === 'O' && $scope.db.cells[2] === 'O') {
+		$scope.oFunctions();}
+	else if ($scope.db.cells[3] === 'O' && $scope.db.cells[4] === 'O' && $scope.db.cells[5] === 'O') {
+		$scope.oFunctions();}
+	else if ($scope.db.cells[6] === 'O' && $scope.db.cells[7] === 'O' && $scope.db.cells[8] === 'O') {
+		$scope.oFunctions();}
+	else if ($scope.db.cells[0] === 'O' && $scope.db.cells[3] === 'O' && $scope.db.cells[6] === 'O') {
+		$scope.oFunctions();}
+	else if ($scope.db.cells[1] === 'O' && $scope.db.cells[4] === 'O' && $scope.db.cells[7] === 'O') {
+		$scope.oFunctions();}
+	else if ($scope.db.cells[2] === 'O' && $scope.db.cells[5] === 'O' && $scope.db.cells[8] === 'O') {
+		$scope.oFunctions();}
+	else if ($scope.db.cells[0] === 'O' && $scope.db.cells[4] === 'O' && $scope.db.cells[8] === 'O') {
+		$scope.oFunctions();}
+	else if ($scope.db.cells[2] === 'O' && $scope.db.cells[4] === 'O' && $scope.db.cells[6] === 'O') {
+		$scope.oFunctions();}
 	else if (numMoves == 9) {
 		alert("Cat's Game! Meow!");
 		$scope.resetGame();
+		if (player % 2 === 0) {
+			player = 2;
+		}
+		else {
+			player = 3;
+		}
 	}
 };
 
 
-$scope.resetGame = function() {
-	$scope.cells = ['','','','','','','','',''];
-	numMoves = 0;
+
+$scope.xFunctions = function() {
+	alert("Player 1 Wins!!");
+	$scope.player1 += 1; 
+	$scope.resetGame();
 }
 
 
-var player = 1;
-var numMoves = 0
+$scope.oFunctions = function() {
+	alert("Player 2 Wins!!");
+	$scope.player2 += 1;
+	$scope.resetGame();
+}
+
+
+$scope.resetButt = function() {
+	if (player >= 6) {
+		document.getElementById('resetButton').style.visibility = 'hidden';
+	}
+	else if (player < 6) {
+		document.getElementById('resetButton').style.visibility = 'visible';
+	}
+}
+
+
+$scope.goFirstPlayer = function() {
+	if (player % 2 === 0) {
+	document.getElementById('firstPlayer').style.visibility = 'visible';
+	}
+	else {
+	document.getElementById('firstPlayer').style.visibility = 'hidden';
+	}
+
+}
+
+
+$scope.goSecondPlayer = function() {
+	if (player % 2 === 0) {
+	document.getElementById('secondPlayer').style.visibility = 'hidden';
+	}
+	else {
+	document.getElementById('secondPlayer').style.visibility = 'visible';
+	}
+
+}
+
+
+$scope.resetGame = function() {
+	$scope.db.cells = ['','','','','','','','',''];
+	numMoves = 0;
+	player = 2;
+}
+
+
+var player = 2;
+var numMoves = 0;
 
 $scope.alternate = function($index) {
 
-	if ($scope.cells[$index] === '') { 
+	if ($scope.db.cells[$index] === '') { 
 
-		if (player === 1) {
+		if (player % 2 === 0) {
+			
+
 			player++;
-			$scope.cells[$index] = 'X';
+			$scope.db.cells[$index] = 'X';
 			numMoves++;
-			//console.log(numMoves);
+			// console.log(numMoves);
+			console.log(player);
 			$scope.checkXWin();
+			$scope.goSecondPlayer();
 		}
 		else {
-			player--;
-			$scope.cells[$index] = 'O';
+			player++;
+			$scope.db.cells[$index] = 'O';
 			numMoves++;
 			//console.log(numMoves);
 			$scope.checkOWin();
+			$scope.goFirstPlayer();
 		}
   	}
 	}
 
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -337,6 +427,32 @@ storeDetailsObject.$bindTo($scope, 'storeDetails')
 		$scope.storeDetails = initialDB;
 		}
 	});
+
+
+
+
+
+
+
+
+
+
+
+$scope.db = {
+		cells:['','','','','','','','','']
+	};
+
+});
+
+
+
+
+
+
+
+
+
+
 
 
 

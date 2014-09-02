@@ -14,8 +14,6 @@
 
 </head>
 
-<input type="text" ng-model="data.text"/>
-
 <body ng-controller="tttController">
 
 	<h1 id="heading">[  TiC TaC ToE  ]</h1>
@@ -26,9 +24,22 @@
     </div>
 -->
 
+
     <div>
-        <button id="resetButton" ng-click="resetGame()">Reset if you dare!</button>
+        <button id="resetButton" ng-hide="resetButt()" ng-click="resetGame()">Cheat Button!</button>
     </div>
+
+<div id="scoreContainer">
+
+    <div id="firstPlayer" ng-hide="goSecondPlayer()" class="turn">
+        <p>Player 1's Turn</p>
+    </div>
+
+
+    <div id="secondPlayer" ng-hide="goFirstPlayer()" class="turn turn2">
+        <p>Player 2's Turn</p>
+    </div>
+
 
     <div id="playerStats">
 
@@ -36,13 +47,13 @@
 
         <p>Player 2 Score: {{ player2 }}</p>
 
-        <p>Total Games: {{ player1 + player2 }}</p>
-
         <p>% Win Player 1: {{ ((player1) / (player1 + player2))*100 }}</p>
 
         <p>% Win Player 2: {{ ((player2) / (player1 + player2))*100 }}</p>
 
     </div>
+
+</div>
 
 <!--
     <div id="score2">
@@ -52,7 +63,7 @@
 -->
 
 	<div id="container">
-	<div id="ninedivs" ng-repeat="cell in cells track by $index"
+	<div id="ninedivs" ng-repeat="cell in db.cells track by $index"
     ng-class="{cell: true, clear:($index % 3 == 0), rightLine:($index % 3 != 2), bottomLine: ($index <= 5), one:($index===0), two:($index===1), three:($index===2), four:($index===3), five:($index===4), six:($index===5), seven:($index===6), eight:($index===7), nine:($index===8) }" ng-click="alternate($index)" onmouseover="this.style.backgroundImage='url(http://www.freevector.com/site_media/preview_images/FreeVector-Gray-Floral-Pattern.jpg)';" onmouseout="this.style.background='white';"
     class="cell">{{ cell }}</div>
     </div>
